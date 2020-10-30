@@ -137,6 +137,7 @@
 
 		// pass current string state to each function, types 1 char per call
 		typewrite: function(curString, curStrPos) {
+			
 			// exit when stopped
 			if (this.stop === true) {
 				return;
@@ -176,8 +177,12 @@
 
 				if (self.contentType === 'html') {
 					// skip over html tags while typing
+					if(curString === "Developer"){
+						curString = "A Developer"
+					}
 					var curChar = curString.substr(curStrPos).charAt(0)
 					if (curChar === '<' || curChar === '&') {
+						
 						var tag = '';
 						var endTag = '';
 						if (curChar === '<') {
@@ -193,6 +198,7 @@
 						}
 						curStrPos++;
 						tag += endTag;
+						
 					}
 				}
 
