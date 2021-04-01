@@ -1,2 +1,2 @@
 # jakemeout.github.io
-Personal Page
+Personal Website and portolio
